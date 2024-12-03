@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Jogo : MonoBehaviour
 {
+    public FimJogo fimJogo;
     public int totalBatteries = 3; // Número total de baterias
     private int collectedBatteries = 0; // Número de baterias coletadas
 
@@ -16,7 +17,8 @@ public class Jogo : MonoBehaviour
         // Verifica se todas as baterias foram coletadas
         if (collectedBatteries >= totalBatteries)
         {
-            EndGame();
+            fimJogo.CheckWinCondition(totalBatteries - collectedBatteries);
+            //EndGame();
         }
     }
 

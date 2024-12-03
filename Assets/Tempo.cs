@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Tempo : MonoBehaviour
 {
-    public float totalTime = 15f; 
+    public float totalTime = 60f; 
     private float remainingTime;
     public Text timerText; 
     public bool isGameActive = false;
